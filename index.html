@@ -1,108 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyStore</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-    }
-    header {
-      background: #333;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .product {
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .product img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .product h3 {
-      margin: 10px 0;
-    }
-    .product p {
-      font-size: 18px;
-      color: #444;
-    }
-    .product button {
-      background: #28a745;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .product button:hover {
-      background: #218838;
-    }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNNARI - Online Shopping</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <header>
-    <h1>🛒 Welcome to MyStore</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Products</a>
-      <a href="#">Cart</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-
-  <section class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/200" alt="Product 1">
-      <h3>Product 1</h3>
-      <p>₹499</p>
-      <button>Add to Cart</button>
+    <div class="top-offer-banner">
+        NEW YEAR SALE 5% OFF ON PURCHASE ABOVE 4999/- RS
     </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/200" alt="Product 2">
-      <h3>Product 2</h3>
-      <p>₹799</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/200" alt="Product 3">
-      <h3>Product 3</h3>
-      <p>₹999</p>
-      <button>Add to Cart</button>
-    </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2025 MyStore. All rights reserved.</p>
-  </footer>
+    <header class="main-header">
+        <div class="header-left">
+            <button class="menu-toggle">☰</button>
+        </div>
+        <div class="header-logo">
+            <img src="images/unnari-logo.png" alt="UNNARI Logo">
+        </div>
+        <div class="header-right">
+            <a href="#" class="search-icon">🔍</a>
+            <a href="cart.html" class="cart-icon">🛒</a>
+        </div>
+    </header>
 
+    <section class="festival-offer-section">
+        <p class="offer-tag">FESTIVAL OFFER</p>
+        <h2>BIG SAVING DAYS</h2>
+        <p>Products up to 40% off + 5% off* | Free Shipping</p>
+        <div class="countdown-timer">
+            <span id="days">00</span> DAY
+            <span id="hours">00</span> HOURS
+            <span id="minutes">00</span> MIN
+            <span id="seconds">00</span> SEC
+        </div>
+    </section>
+
+    <div class="filter-sort-bar">
+        <button>FILTER</button>
+        <button>SORT BY</button>
+        <div class="layout-toggle">...</div>
+    </div>
+
+    <main class="product-listing">
+        <div class="product-grid">
+            <div class="product-item" data-id="p1" data-name="ZAINAB NAVY BLUE RAYON KURTA PANT SET" data-price="349" data-old-price="1999">
+                <div class="save-badge">SAVE RS. 1,650.00</div>
+                <img src="images/navy-blue-kurta.jpg" alt="Navy Blue Kurta Set">
+                <button class="quick-add-btn">+</button>
+                <h3>ZAINAB NAVY BLUE RAYON KURTA PANT SET</h3>
+                <p class="new-price">RS. 349.00</p>
+                <p class="old-price">RS. 1,999.00</p>
+            </div>
+
+            <div class="product-item" data-id="p2" data-name="ZAINAB MINT GREEN RAYON KURTA PANT SET" data-price="349" data-old-price="1999">
+                <div class="save-badge">SAVE RS. 1,650.00</div>
+                <img src="images/mint-green-kurta.jpg" alt="Mint Green Kurta Set">
+                <button class="quick-add-btn">+</button>
+                <h3>ZAINAB MINT GREEN RAYON KURTA PANT SET</h3>
+                <p class="new-price">RS. 349.00</p>
+                <p class="old-price">RS. 1,999.00</p>
+            </div>
+
+            <div class="product-item" data-id="p3" data-name="ZAINAB RED RAYON KURTA PANT SET" data-price="349" data-old-price="1999">
+                <div class="save-badge">SAVE RS. 1,650.00</div>
+                <img src="images/red-kurta.jpg" alt="Red Kurta Set">
+                <button class="quick-add-btn">+</button>
+                <h3>ZAINAB RED RAYON KURTA PANT SET</h3>
+                <p class="new-price">RS. 349.00</p>
+                <p class="old-price">RS. 1,999.00</p>
+            </div>
+
+            <div class="product-item" data-id="p4" data-name="ZAINAB PURPLE RAYON KURTA PANT SET" data-price="349" data-old-price="1999">
+                <div class="save-badge">SAVE RS. 1,650.00</div>
+                <img src="images/purple-kurta.jpg" alt="Purple Kurta Set">
+                <button class="quick-add-btn">+</button>
+                <h3>ZAINAB PURPLE RAYON KURTA PANT SET</h3>
+                <p class="new-price">RS. 349.00</p>
+                <p class="old-price">RS. 1,999.00</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 UNNARI. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
